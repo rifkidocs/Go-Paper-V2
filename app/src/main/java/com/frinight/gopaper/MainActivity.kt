@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.llCommunity.setOnClickListener {
-            handleNavigation(binding.llCommunity, binding.tvCommunity, FragmentCommunity())
+            handleNavigation(binding.llCommunity, binding.tvCommunity, FragmentTemplate())
         }
 
         binding.llEducation.setOnClickListener {
