@@ -14,20 +14,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.013" />
 
-    <ImageView
-        android:id="@+id/ivPickup"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="48dp"
-        android:src="@drawable/recycle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <LinearLayout
+        android:background="@drawable/navbottom"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="85dp"
         android:orientation="horizontal"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -123,6 +114,17 @@
                 android:textAlignment="center" />
         </LinearLayout>
 
+
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivPickup"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/recycle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
