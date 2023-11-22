@@ -20,6 +20,7 @@
             android:paddingBottom="16dp">
 
             <ImageView
+                android:id="@+id/btnbackfromlanguagetoprofile"
                 android:layout_width="33dp"
                 android:layout_height="34dp"
                 android:background="@drawable/back" />
@@ -29,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Pick Up"
+                android:text="Language"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
@@ -38,11 +39,6 @@
                 android:layout_width="33dp"
                 android:layout_height="wrap_content"
                 android:gravity="end">
-
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="26dp"
-                    android:background="@drawable/notif" />
             </LinearLayout>
 
 
@@ -56,11 +52,10 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <!-- Konten Scroll Ada disini -->
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecycleView2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </LinearLayout>
+            android:layout_height="match_parent" />
 
     </androidx.core.widget.NestedScrollView>
 
