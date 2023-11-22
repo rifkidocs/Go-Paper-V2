@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/navtop"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="24dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="34dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Notifikasi"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/background1"
+            android:layout_width="411dp"
+            android:layout_height="90dp"
+            android:background="@drawable/navtop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/head" />
+
+        <ImageView
+            android:id="@+id/icon_notifikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notifikasi_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/background1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/background1"
+            app:layout_constraintVertical_bias="0.50" />
+
+        <ImageButton
+            android:id="@+id/notif1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/rounded_profile"
+            android:backgroundTint="#FF4141"
+            app:layout_constraintBottom_toBottomOf="@+id/background1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="@+id/background1"
+            app:layout_constraintTop_toTopOf="@+id/background1"
+            app:layout_constraintVertical_bias="0.293" />
+
+        <TextView
+            android:id="@+id/kegiatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsreguler"
+            android:text="Kegiatan"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold|normal"
+            app:layout_constraintBottom_toBottomOf="@+id/background1"
+            app:layout_constraintEnd_toEndOf="@+id/background1"
+            app:layout_constraintHorizontal_bias="0.352"
+            app:layout_constraintStart_toStartOf="@+id/background1"
+            app:layout_constraintTop_toTopOf="@+id/background1"
+            app:layout_constraintVertical_bias="0.180" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="324dp"
+            android:layout_height="29dp"
+            android:fontFamily="@font/poppinsreguler"
+            android:paddingStart="100dp"
+            android:paddingEnd="50dp"
+            android:text="Ikuti kegiatan Pembersihan Sungai bersama Pandawara Grup"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:textStyle="bold|normal"
+            app:layout_constraintBottom_toBottomOf="@+id/background1"
+            app:layout_constraintEnd_toEndOf="@+id/background1"
+            app:layout_constraintHorizontal_bias="0.230"
+            app:layout_constraintStart_toStartOf="@+id/background1"
+            app:layout_constraintTop_toTopOf="@+id/kegiatan"
+            app:layout_constraintVertical_bias="0.50" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsreguler"
+            android:text="8 Sep 2023 | 13.00"
+            android:textColor="@color/black"
+            android:textSize="8dp"
+            android:textStyle="bold|normal"
+            app:layout_constraintBottom_toBottomOf="@+id/background1"
+            app:layout_constraintEnd_toEndOf="@+id/background1"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toStartOf="@+id/background1"
+            app:layout_constraintTop_toTopOf="@+id/text"
+            app:layout_constraintVertical_bias="0.763" />
+
+
+    <ImageButton
+        android:id="@+id/background2"
+        android:layout_width="411dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="-8dp"
+        android:background="@drawable/persegi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background1" />
+
+        <ImageView
+            android:id="@+id/icon_notifikasi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notifikasi_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/background2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/background2"
+            app:layout_constraintVertical_bias="0.50" />
+
+        <TextView
+            android:id="@+id/kegiatan2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsreguler"
+            android:text="Kegiatan"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold|normal"
+            app:layout_constraintBottom_toBottomOf="@+id/background2"
+            app:layout_constraintEnd_toEndOf="@+id/background1"
+            app:layout_constraintHorizontal_bias="0.352"
+            app:layout_constraintStart_toStartOf="@+id/background2"
+            app:layout_constraintTop_toTopOf="@+id/background2"
+            app:layout_constraintVertical_bias="0.150" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="324dp"
+            android:layout_height="29dp"
+            android:fontFamily="@font/poppinsreguler"
+            android:paddingStart="100dp"
+            android:text="Ikuti kegiatan Penanaman Hutan Mangrove di pantai selatan"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:textStyle="bold|normal"
+            app:layout_constraintBottom_toBottomOf="@+id/background2"
+            app:layout_constraintEnd_toEndOf="@+id/background2"
+            app:layout_constraintHorizontal_bias="0.230"
+            app:layout_constraintStart_toStartOf="@+id/background2"
+            app:layout_constraintTop_toTopOf="@+id/kegiatan2"
+            app:layout_constraintVertical_bias="0.50" />
+
+        <TextView
+            android:id="@+id/date2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsreguler"
+            android:text="8 Sep 2023 | 10.35"
+            android:textColor="@color/black"
+            android:textSize="8dp"
+            android:textStyle="bold|normal"
+            app:layout_constraintBottom_toBottomOf="@+id/background2"
+            app:layout_constraintEnd_toEndOf="@+id/background2"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toStartOf="@+id/background2"
+            app:layout_constraintTop_toTopOf="@+id/text2"
+            app:layout_constraintVertical_bias="0.763" />
+
+    <ImageButton
+        android:id="@+id/background4"
+        android:layout_width="411dp"
+        android:layout_height="90dp"
+        android:background="@drawable/persegi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background2" />
+
+    <ImageView
+        android:id="@+id/icon_notifikasi4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/notifikasi_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/background4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background4"
+        app:layout_constraintVertical_bias="0.50" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsreguler"
+        android:text="INFO"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold|normal"
+        app:layout_constraintBottom_toBottomOf="@+id/background4"
+        app:layout_constraintEnd_toEndOf="@+id/background4"
+        app:layout_constraintHorizontal_bias="0.310"
+        app:layout_constraintStart_toStartOf="@+id/background4"
+        app:layout_constraintTop_toTopOf="@+id/background4"
+        app:layout_constraintVertical_bias="0.150" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="324dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/poppinsreguler"
+        android:paddingStart="100dp"
+        android:text="Saldo dari sampah kertas yang kamu tukarkan sudah masuk"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold|normal"
+        app:layout_constraintBottom_toBottomOf="@+id/background4"
+        app:layout_constraintEnd_toEndOf="@+id/background4"
+        app:layout_constraintHorizontal_bias="0.230"
+        app:layout_constraintStart_toStartOf="@+id/background4"
+        app:layout_constraintTop_toTopOf="@+id/info"
+        app:layout_constraintVertical_bias="0.50" />
+
+    <TextView
+        android:id="@+id/date4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsreguler"
+        android:text="02 Okt 2023 | 20.30"
+        android:textColor="@color/black"
+        android:textSize="8dp"
+        android:textStyle="bold|normal"
+        app:layout_constraintBottom_toBottomOf="@+id/background4"
+        app:layout_constraintEnd_toEndOf="@+id/background4"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="@+id/background4"
+        app:layout_constraintTop_toTopOf="@+id/text4"
+        app:layout_constraintVertical_bias="0.763" />
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
