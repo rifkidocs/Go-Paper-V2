@@ -12,6 +12,7 @@
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="26dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bgformlogin">
@@ -90,7 +91,7 @@
             <View
                 android:id="@+id/view"
                 android:layout_width="match_parent"
-                android:layout_height="146dp"
+                android:layout_height="150dp"
                 android:layout_marginHorizontal="26dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/rounded_shadow"
@@ -103,7 +104,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/poppinsbold"
                 android:paddingStart="26dp"
                 android:text="Pick And Pack"
