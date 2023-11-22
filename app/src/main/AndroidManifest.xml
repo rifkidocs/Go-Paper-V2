@@ -22,6 +22,30 @@
             android:name=".Notifikasi_Activity"
             android:exported="false" />
         <activity
+            android:name=".ActivityKomentar"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityTipsTrick"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityDetailKegiatan"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityKegiatan"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityUmum"
+            android:exported="false" />
+        <activity
+            android:name=".Form_Register"
+            android:exported="false" />
+        <activity
+            android:name=".Form_Login"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".edit_profile_Activity"
             android:exported="false" />
         <activity
