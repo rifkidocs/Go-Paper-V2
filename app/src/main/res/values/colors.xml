@@ -5,4 +5,6 @@
     <color name="test">#DF5E5E</color>
     <color name="colorSelected">#26C165</color> <!-- Blue color for selected -->
     <color name="colorUnselected">#000000</color> <!-- Black color for unselected -->
+    <color name="garis">#4D000000</color>
+    <color name="text">#0D986A</color>
 </resources>

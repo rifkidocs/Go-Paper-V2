@@ -13,6 +13,27 @@
         android:theme="@style/Theme.GoPaper"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityGabungUmum"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityKomentar"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityTipsTrick"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityDetailKegiatan"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityKegiatan"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityUmum"
+            android:exported="false" />
+        <activity
+            android:name=".activity_kegiatan"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
