@@ -131,6 +131,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             <Button
+                android:id="@+id/btnPickupNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorSelected"

@@ -7,6 +7,7 @@
     tools:context=".Pick_Up3">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingBottom="26dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -184,7 +185,7 @@ Silahkan menunggu maksimal 1x24 jam untuk proses selanjutnya."
             android:layout_marginTop="289dp"
             android:fontFamily="@font/poppinsreguler"
             android:text="Informasi Penjemputan"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.253"
@@ -349,7 +350,7 @@ Silahkan menunggu maksimal 1x24 jam untuk proses selanjutnya."
             android:layout_marginTop="520dp"
             android:fontFamily="@font/poppinsreguler"
             android:text="Informasi Penjualan"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.219"

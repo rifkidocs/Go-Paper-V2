@@ -1,409 +1,479 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Pick_Up2">
+    android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/imgbtn_exit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@color/white"
-        android:src="@drawable/exit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView95"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Pembayaran"
-        android:textColor="#000000"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/navtop"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingTop="24dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
 
-    <View
-        android:layout_width="410dp"
-        android:layout_height="2dp"
-        android:background="@drawable/pick1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:background="@drawable/back" />
 
-    <View
-        android:layout_width="357dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="104dp"
-        android:background="@drawable/pick"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_community"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Pembayaran"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-    <View
-        android:layout_width="352dp"
-        android:layout_height="224dp"
-        android:layout_marginTop="132dp"
-        android:background="@drawable/pick2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="33dp"
+                android:layout_height="wrap_content"
+                android:gravity="end">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="Informasi Penjemputan"
-        android:textColor="#000000"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.213"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+        </LinearLayout>
 
-    <ImageView
-        android:layout_width="35dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="144dp"
-        android:background="@color/white"
-        android:src="@drawable/pickphone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <View
-        android:layout_width="255dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="176dp"
-        android:background="@drawable/pick1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <TextView
-        android:layout_width="113dp"
-        android:layout_height="19dp"
-        android:layout_marginTop="145dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="083812346575"
-        android:textColor="#979797"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:paddingBottom="26dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="35dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="192dp"
-        android:background="@color/white"
-        android:src="@drawable/picklocation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".Pick_Up2">
 
-    <View
-        android:layout_width="255dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="236dp"
-        android:background="@drawable/pick1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:id="@+id/view15"
+                    android:layout_width="357dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/pick"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="273dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="192dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="Jl. Medan Merdeka Utara No.2, RT.5/RW.2, Gambir, Kecamatan Gambir, Kota Jakarta Pusat,  10110"
-        android:textColor="#979797"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:id="@+id/view16"
+                    android:layout_width="346dp"
+                    android:layout_height="223dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/pick2"
+                    app:layout_constraintEnd_toEndOf="@+id/view15"
+                    app:layout_constraintStart_toStartOf="@+id/view15"
+                    app:layout_constraintTop_toTopOf="@+id/view15" />
 
-    <ImageView
-        android:layout_width="35dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="248dp"
-        android:background="@color/white"
-        android:src="@drawable/picktoday"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="137dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="Informasi Penjemputan"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view15"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/view16"
+                    app:layout_constraintTop_toTopOf="@+id/view15" />
 
-    <View
-        android:layout_width="255dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="280dp"
-        android:background="@drawable/pick1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="35dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:src="@drawable/pickphone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
-    <TextView
-        android:layout_width="157dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="248dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="Kamis, 01 Juni 2023"
-        android:textColor="#979797"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:id="@+id/view17"
+                    android:layout_width="255dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="61dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="@drawable/pick1"
+                    app:layout_constraintEnd_toEndOf="@+id/view15"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/view16"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
-    <ImageView
-        android:layout_width="35dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="292dp"
-        android:background="@color/white"
-        android:src="@drawable/pickclock"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="113dp"
+                    android:layout_height="19dp"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="083812346575"
+                    android:textColor="#979797"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.312"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
-    <View
-        android:layout_width="255dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="324dp"
-        android:background="@drawable/pick1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="35dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:src="@drawable/picklocation"
+                    app:layout_constraintEnd_toStartOf="@+id/textView22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <TextView
-        android:layout_width="187dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="292dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="08:00-12:00 Pagi WIB"
-        android:textColor="#979797"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:id="@+id/view18"
+                    android:layout_width="255dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/pick1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.576"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
-    <View
-        android:layout_width="357dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="380dp"
-        android:background="@drawable/pick"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.574"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="273dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="Jl. Medan Merdeka Utara No.2, RT.5/RW.2, Gambir, Kecamatan Gambir, Kota Jakarta Pusat,  10110"
+                    android:textColor="#979797"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.652"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view17" />
 
-    <View
-        android:id="@+id/view6"
-        android:layout_width="348dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="420dp"
-        android:background="@drawable/pick2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="35dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/white"
+                    android:src="@drawable/picktoday"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="388dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="Informasi Penjualan"
-        android:textColor="#000000"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:id="@+id/view21"
+                    android:layout_width="255dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="39dp"
+                    android:background="@drawable/pick1"
+                    app:layout_constraintEnd_toEndOf="@+id/view15"
+                    app:layout_constraintHorizontal_bias="0.605"
+                    app:layout_constraintStart_toStartOf="@+id/view15"
+                    app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
-    <TextView
-        android:layout_width="104dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="432dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="Kertas | 1 Kg"
-        android:textColor="#979797"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="157dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="Kamis, 01 Juni 2023"
+                    android:textColor="#979797"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.354"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view18" />
 
-    <View
-        android:layout_width="330dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="460dp"
-        android:background="@drawable/pick1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="35dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/white"
+                    android:src="@drawable/pickclock"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
-    <TextView
-        android:layout_width="104dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="432dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Rp 15.000"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:layout_width="255dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="39dp"
+                    android:background="@drawable/pick1"
+                    app:layout_constraintEnd_toEndOf="@+id/view15"
+                    app:layout_constraintHorizontal_bias="0.576"
+                    app:layout_constraintStart_toStartOf="@+id/view15"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
-    <TextView
-        android:layout_width="141dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="472dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="Estimasi Penjualan"
-        android:textColor="#979797"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="187dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="104dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="08:00-12:00 Pagi WIB"
+                    android:textColor="#979797"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view16"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/view16"
+                    app:layout_constraintTop_toBottomOf="@+id/view21" />
 
-    <TextView
-        android:layout_width="104dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="472dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Rp 15.000"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:id="@+id/view13"
+                    android:layout_width="357dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="26dp"
+                    android:background="@drawable/pick"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.574"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view15" />
 
-    <TextView
-        android:layout_width="141dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="504dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="Biaya Layanan"
-        android:textColor="#979797"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="348dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/pick2"
+                    app:layout_constraintEnd_toEndOf="@+id/view13"
+                    app:layout_constraintHorizontal_bias="0.571"
+                    app:layout_constraintStart_toStartOf="@+id/view13"
+                    app:layout_constraintTop_toTopOf="@+id/view13" />
 
-    <TextView
-        android:layout_width="104dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="504dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Rp 1.000"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="166dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="Informasi Penjualan"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view13"
+                    app:layout_constraintHorizontal_bias="0.416"
+                    app:layout_constraintStart_toStartOf="@+id/view13"
+                    app:layout_constraintTop_toTopOf="@+id/view13" />
 
-    <TextView
-        android:layout_width="199dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="533dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="Estimasi Pendapatan"
-        android:textColor="#979797"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.210"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="104dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="Kertas | 1 Kg"
+                    android:textColor="#979797"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view6" />
 
-    <TextView
-        android:layout_width="104dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="533dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Rp 14.000"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:id="@+id/view19"
+                    android:layout_width="330dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/pick1"
+                    app:layout_constraintEnd_toEndOf="@+id/view13"
+                    app:layout_constraintHorizontal_bias="0.53"
+                    app:layout_constraintStart_toStartOf="@+id/view6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="584dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Metode Pembayaran"
-        android:textColor="#000000"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.209"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="104dp"
+                    android:layout_height="21dp"
+                    android:layout_marginStart="238dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Rp 15.000"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view13"
+                    app:layout_constraintHorizontal_bias="0.133"
+                    app:layout_constraintStart_toStartOf="@+id/view13"
+                    app:layout_constraintTop_toTopOf="@+id/view6" />
 
-    <TextView
-        android:layout_width="341dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="620dp"
-        android:fontFamily="@font/poppinsreguler"
-        android:text="Metode penjualan akan diberikan dalam bentuk Tunai setelah proses transaksi selesai."
-        android:textColor="#979797"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="141dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="165dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="Estimasi Penjualan"
+                    android:textColor="#979797"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view6"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/view6"
+                    app:layout_constraintTop_toBottomOf="@+id/view19" />
 
-    <View
-        android:id="@+id/pickv2"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/pick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="104dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Rp 15.000"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view6"
+                    app:layout_constraintHorizontal_bias="0.887"
+                    app:layout_constraintStart_toEndOf="@+id/textView28"
+                    app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Pick Up"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="141dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="Biaya Layanan"
+                    android:textColor="#979797"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.159"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="104dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Rp 1.000"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view6"
+                    app:layout_constraintHorizontal_bias="0.957"
+                    app:layout_constraintStart_toStartOf="@+id/view6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="199dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="108dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="Estimasi Pendapatan"
+                    android:textColor="#979797"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view13"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/view13"
+                    app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="104dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Rp 14.000"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/view6"
+                    app:layout_constraintHorizontal_bias="0.959"
+                    app:layout_constraintStart_toStartOf="@+id/view6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Metode Pembayaran"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.209"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="341dp"
+
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:text="Metode penjualan akan diberikan dalam bentuk Tunai setelah proses transaksi selesai."
+                    android:textColor="#979797"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.542"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <View
+                    android:id="@+id/pickv2"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/pick"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Pick Up"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.492"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/pickv2" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

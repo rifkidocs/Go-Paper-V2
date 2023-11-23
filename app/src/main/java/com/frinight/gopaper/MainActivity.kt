@@ -1,5 +1,6 @@
 package com.frinight.gopaper
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -37,7 +38,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.ivPickup.setOnClickListener {
             setInitialTextColors()
-            replaceFragment(FragmentPickup())
+            val intent = Intent(this, Pick_Up_Home::class.java)
+            startActivity(intent)
         }
 
         binding.llProfile.setOnClickListener {
