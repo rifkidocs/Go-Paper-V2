@@ -76,6 +76,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/white"
         android:id="@+id/editTextEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -104,6 +106,8 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
     <EditText
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/white"
         android:id="@+id/etPasswordLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

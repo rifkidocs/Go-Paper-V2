@@ -7,12 +7,25 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.frinight.gopaper.data.AppDatabase
+import com.frinight.gopaper.data.dao.UserDao
+import com.frinight.gopaper.databinding.FragmentProfileBinding
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+
+
+lateinit var userDao: UserDao
+lateinit var binding: FragmentProfileBinding
 
 class FragmentProfile : Fragment(R.layout.fragment_profile), View.OnClickListener {
     private lateinit var emailTextView: TextView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding = FragmentProfileBinding.bind(view)
+        userDao = AppDatabase.getInstance(requireContext()).userDao()
+
 
         val saldo: TextView = view.findViewById(R.id.saldo)
         val logout: TextView = view.findViewById(R.id.logout)
@@ -23,6 +36,7 @@ class FragmentProfile : Fragment(R.layout.fragment_profile), View.OnClickListene
 
         // Memanggil metode untuk mengisi email dari SharedPreferences
         loadUserEmail()
+        loadUserFullName()
     }
 
     override fun onClick(v: View) {
@@ -62,4 +76,30 @@ class FragmentProfile : Fragment(R.layout.fragment_profile), View.OnClickListene
         // Menetapkan nilai email ke TextView
         emailTextView.text = userEmail
     }
+
+    private fun loadUserFullName() {
+        val userId = getLoggedInUserId()
+        if (userId != -1L) {
+            GlobalScope.launch {
+                val fullName = userDao.getFullName(userId)
+                updateGreetingText(fullName)
+            }
+        }
+    }
+
+    private fun getLoggedInUserId(): Long {
+        val sharedPreferences = requireContext().getSharedPreferences("login_prefs", Context.MODE_PRIVATE)
+        return sharedPreferences.getLong("userId", -1L)
+    }
+
+    private fun updateGreetingText(fullName: String?) {
+        requireActivity().runOnUiThread {
+            val greetingTextView: TextView = binding.FullNameProfile
+            if (!fullName.isNullOrBlank()) {
+                greetingTextView.text = "$fullName"
+            }
+        }
+    }
 }
+
+

@@ -68,7 +68,6 @@
                     android:id="@+id/tv_umum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/poppinmedium"
                     android:text="Umum"
                     android:textColor="@color/black"
@@ -76,17 +75,16 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.051"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/uarrowright"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginTop="25dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.945"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
 
                 <View
@@ -156,20 +154,23 @@
                     app:layout_constraintTop_toBottomOf="@+id/g_k">
 
                     <LinearLayout
+                        android:paddingVertical="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="140dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
                             android:orientation="vertical">
 
                             <ImageView
                                 android:id="@+id/k1"
-                                android:layout_width="125dp"
-                                android:layout_height="100dp"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
                                 android:layout_marginLeft="18dp"
                                 android:layout_marginTop="2dp"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -181,11 +182,11 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="18dp"
+                                android:layout_marginStart="10dp"
                                 android:fontFamily="@font/poppinsreguler"
                                 android:text="Pembersihan Sungai bersama\nPandawara Grup"
                                 android:textColor="@color/black"
-                                android:textSize="8sp" />
+                                android:textSize="11sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -195,8 +196,8 @@
 
                             <ImageView
                                 android:id="@+id/k2"
-                                android:layout_width="125dp"
-                                android:layout_height="100dp"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
                                 android:layout_marginLeft="15dp"
                                 android:layout_marginTop="2dp"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -210,7 +211,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppinsreguler"
                                 android:text="Penanaman 1000 pohon di \nHutan Kalimantan"
-                                android:textSize="8sp"
+                                android:textSize="11sp"
                                 android:textColor="@color/black"
                                 android:layout_marginStart="15dp"/>
 
@@ -223,8 +224,8 @@
 
                             <ImageView
                                 android:id="@+id/k"
-                                android:layout_width="125dp"
-                                android:layout_height="100dp"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
                                 android:layout_marginLeft="15dp"
                                 android:layout_marginTop="2dp"
                                 app:srcCompat="@drawable/k3" />
@@ -234,9 +235,9 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppinsreguler"
                                 android:text="Penanaman Hutan Mangrove \ndi pantai selatan"
-                                android:textSize="8sp"
+                                android:textSize="10sp"
                                 android:textColor="@color/black"
-                                android:layout_marginStart="15dp"/>
+                                android:layout_marginStart="11sp"/>
 
                         </LinearLayout>
 

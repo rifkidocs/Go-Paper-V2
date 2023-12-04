@@ -21,12 +21,6 @@ interface UserDao {
     @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH)
     suspend fun getUserByEmail(email: String): User?
 
-    @Query("DELETE FROM users WHERE uid = :userId")
-    suspend fun deleteUserById(userId: Long)
-
-    @Query("DELETE FROM users")
-    suspend fun deleteAllUsers()
-
     // Metode untuk pembaruan data
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateUser(user: User)
