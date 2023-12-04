@@ -29,6 +29,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/back"
             android:layout_width="33dp"
             android:layout_height="34dp"
             android:background="@drawable/back" />
@@ -88,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/etEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-5dp"

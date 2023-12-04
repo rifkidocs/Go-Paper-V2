@@ -16,11 +16,15 @@ class FragmentCommunity : Fragment(R.layout.fragment_community), View.OnClickLis
         val kegiatan: TextView = view.findViewById(R.id.tv_kegiatan)
         val tipstrick: TextView = view.findViewById(R.id.tipstrick)
         val k1: ImageView = view.findViewById(R.id.k1)
+        val backButton: ImageView= view.findViewById(R.id.back)
 
         umum.setOnClickListener(this)
         kegiatan.setOnClickListener(this)
         tipstrick.setOnClickListener(this)
         k1.setOnClickListener(this)
+        backButton.setOnClickListener(this)
+
+
 
     }
 
@@ -43,6 +47,10 @@ class FragmentCommunity : Fragment(R.layout.fragment_community), View.OnClickLis
 
             R.id.k1 -> {
                 val intent = Intent(requireContext(), ActivityDetailKegiatan::class.java)
+                startActivity(intent)
+            }
+            R.id.back -> {
+                val intent = Intent(requireContext(), MainActivity::class.java)
                 startActivity(intent)
             }
         }

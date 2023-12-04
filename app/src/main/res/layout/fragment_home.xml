@@ -42,10 +42,11 @@
                     android:paddingTop="16dp">
 
                     <TextView
+                        android:id="@+id/fullName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppinsbold"
-                        android:text="Hi, Adi Putra"
+                        android:text="Hi,"
                         android:textColor="@color/blackprimary"
                         android:textSize="20sp" />
 
@@ -55,6 +56,7 @@
                         android:layout_weight="1" />
 
                     <ImageView
+                        android:id="@+id/notif"
                         android:layout_width="24dp"
                         android:layout_height="28dp"
                         android:background="@drawable/notif" />
@@ -195,7 +197,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Rp 40.000"
+                android:text="Rp 0"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"

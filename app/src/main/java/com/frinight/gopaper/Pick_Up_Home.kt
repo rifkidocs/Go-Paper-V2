@@ -3,6 +3,7 @@ package com.frinight.gopaper
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class Pick_Up_Home : AppCompatActivity() {
@@ -15,6 +16,12 @@ class Pick_Up_Home : AppCompatActivity() {
         pilih.setOnClickListener {
             val intent = Intent(this, Pick_Up1::class.java)
             startActivity(intent)
+        }
+
+        val backButton: ImageView = findViewById(R.id.back)
+
+        backButton.setOnClickListener {
+            finish()
         }
 
         val kertasbtn = findViewById<View>(R.id.pickv)
