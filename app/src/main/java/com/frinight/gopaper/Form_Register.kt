@@ -8,12 +8,9 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.frinight.gopaper.data.AppDatabase
 import com.frinight.gopaper.data.entity.User
 import com.frinight.gopaper.retrofit.ApiService
-import com.frinight.gopaper.retrofit.FormLoginModel
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import com.frinight.gopaper.retrofit.FormRegisterModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -74,7 +71,7 @@ class Form_Register : AppCompatActivity() {
                 password = etPassword.text.toString()
             )
 
-            registerUserToApi(FormLoginModel(
+            registerUserToApi(FormRegisterModel(
                 user.fullName ?: "",
                 user.email ?: "",
                 user.phoneNumber ?: "",
@@ -89,12 +86,12 @@ class Form_Register : AppCompatActivity() {
     }
 
 
-    private fun registerUserToApi(user: FormLoginModel) {
+    private fun registerUserToApi(user: FormRegisterModel) {
         val apiService = ApiService.endPoint
-        val call: Call<FormLoginModel> = apiService.postUsers(user)
+        val call: Call<FormRegisterModel> = apiService.postUsers(user)
 
-        call.enqueue(object : Callback<FormLoginModel> {
-            override fun onResponse(call: Call<FormLoginModel>, response: Response<FormLoginModel>) {
+        call.enqueue(object : Callback<FormRegisterModel> {
+            override fun onResponse(call: Call<FormRegisterModel>, response: Response<FormRegisterModel>) {
                 if (response.isSuccessful) {
                     showToast("Pendaftaran Berhasil Silahkan Login")
                     resetInputFields()
@@ -106,7 +103,7 @@ class Form_Register : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<FormLoginModel>, t: Throwable) {
+            override fun onFailure(call: Call<FormRegisterModel>, t: Throwable) {
                 showToast("Gagal mendaftarkan pengguna ${t.message}")
                 Log.d("ErroApi","Gagal mendaftarkan pengguna ${t.message}")
             }

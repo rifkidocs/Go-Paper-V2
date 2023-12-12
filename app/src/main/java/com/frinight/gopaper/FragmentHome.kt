@@ -43,18 +43,13 @@ class FragmentHome : Fragment(R.layout.fragment_home) {
     }
 
     private fun loadUserFullName() {
-        val userId = getLoggedInUserId()
-        if (userId != -1L) {
-            GlobalScope.launch {
-//                val fullName = userDao.getFullName(userId)
-//                updateGreetingText(fullName)
-            }
-        }
+        val fullName = getLoggedInUserFullName()
+        updateGreetingText(fullName)
     }
 
-    private fun getLoggedInUserId(): Long {
+    private fun getLoggedInUserFullName(): String? {
         val sharedPreferences = requireContext().getSharedPreferences("login_prefs", Context.MODE_PRIVATE)
-        return sharedPreferences.getLong("userId", -1L)
+        return sharedPreferences.getString("fullName", null)
     }
 
     private fun updateGreetingText(fullName: String?) {
@@ -62,7 +57,10 @@ class FragmentHome : Fragment(R.layout.fragment_home) {
             val greetingTextView: TextView = binding.fullName
             if (!fullName.isNullOrBlank()) {
                 greetingTextView.text = "Hi, $fullName"
+            } else {
+                greetingTextView.text = "Hi, User"
             }
         }
     }
+
 }

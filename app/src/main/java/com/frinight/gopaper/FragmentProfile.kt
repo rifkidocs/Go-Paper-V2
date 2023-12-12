@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.frinight.gopaper.data.AppDatabase
@@ -13,11 +12,11 @@ import com.frinight.gopaper.databinding.FragmentProfileBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-
 lateinit var userDao: UserDao
 lateinit var binding: FragmentProfileBinding
 
 class FragmentProfile : Fragment(R.layout.fragment_profile), View.OnClickListener {
+
     private lateinit var emailTextView: TextView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -25,7 +24,6 @@ class FragmentProfile : Fragment(R.layout.fragment_profile), View.OnClickListene
 
         binding = FragmentProfileBinding.bind(view)
         userDao = AppDatabase.getInstance(requireContext()).userDao()
-
 
         val saldo: TextView = view.findViewById(R.id.saldo)
         val logout: TextView = view.findViewById(R.id.logout)
@@ -78,18 +76,13 @@ class FragmentProfile : Fragment(R.layout.fragment_profile), View.OnClickListene
     }
 
     private fun loadUserFullName() {
-        val userId = getLoggedInUserId()
-        if (userId != -1L) {
-            GlobalScope.launch {
-                val fullName = userDao.getFullName(userId)
-                updateGreetingText(fullName)
-            }
-        }
+        val fullName = getLoggedInUserFullName()
+        updateGreetingText(fullName)
     }
 
-    private fun getLoggedInUserId(): Long {
+    private fun getLoggedInUserFullName(): String? {
         val sharedPreferences = requireContext().getSharedPreferences("login_prefs", Context.MODE_PRIVATE)
-        return sharedPreferences.getLong("userId", -1L)
+        return sharedPreferences.getString("fullName", null)
     }
 
     private fun updateGreetingText(fullName: String?) {
@@ -101,5 +94,3 @@ class FragmentProfile : Fragment(R.layout.fragment_profile), View.OnClickListene
         }
     }
 }
-
-

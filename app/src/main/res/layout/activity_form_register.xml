@@ -249,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:fontFamily="@font/poppinssemibold"
-                    android:text="Sign Up"
+                    android:text="Sign In"
                     android:textColor="@color/blackprimary" />
             </LinearLayout>
 

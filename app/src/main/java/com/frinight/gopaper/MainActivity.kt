@@ -1,11 +1,11 @@
 package com.frinight.gopaper
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.frinight.gopaper.databinding.ActivityMainBinding
 
@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Mengatur inisialisasi textcolor
-        setTextColor(binding.tvHome, ContextCompat.getColor(this, R.color.colorSelected))
+        // Mengatur inisialisasi text style menjadi bold
+        setTextStyle(binding.tvHome, Typeface.BOLD)
 
         // Membuka FragmentHome saat di inisialisasi
         replaceFragment(FragmentHome())
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.ivPickup.setOnClickListener {
-            setInitialTextColors()
+            setInitialTextStyles()
             val intent = Intent(this, Pick_Up_Home::class.java)
             startActivity(intent)
         }
@@ -47,25 +47,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setInitialTextColors() {
-        setTextColor(binding.tvHome, ContextCompat.getColor(this, R.color.colorUnselected))
-        setTextColor(binding.tvCommunity, ContextCompat.getColor(this, R.color.colorUnselected))
-        setTextColor(binding.tvEducation, ContextCompat.getColor(this, R.color.colorUnselected))
-        setTextColor(binding.tvProfile, ContextCompat.getColor(this, R.color.colorUnselected))
+    private fun setInitialTextStyles() {
+        setTextStyle(binding.tvHome, Typeface.NORMAL)
+        setTextStyle(binding.tvCommunity, Typeface.NORMAL)
+        setTextStyle(binding.tvEducation, Typeface.NORMAL)
+        setTextStyle(binding.tvProfile, Typeface.NORMAL)
     }
 
     private fun handleNavigation(linearLayout: LinearLayout, textView: TextView, fragment: Fragment) {
-        //Menghapus semua warna
-        setInitialTextColors()
+        //Menghapus semua gaya teks sebelumnya
+        setInitialTextStyles()
 
-        // Mengatur warna text saat di klik
-        setTextColor(textView, ContextCompat.getColor(this, R.color.colorSelected))
+        // Mengatur gaya teks saat di klik menjadi bold
+        setTextStyle(textView, Typeface.BOLD)
 
         replaceFragment(fragment)
     }
 
-    private fun setTextColor(textView: TextView, color: Int) {
-        textView.setTextColor(color)
+    private fun setTextStyle(textView: TextView, style: Int) {
+        textView.setTypeface(null, style)
     }
 
     private fun replaceFragment(fragment: Fragment) {
