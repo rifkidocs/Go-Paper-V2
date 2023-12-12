@@ -2,6 +2,7 @@ package com.frinight.gopaper
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -9,8 +10,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.frinight.gopaper.data.AppDatabase
 import com.frinight.gopaper.data.entity.User
+import com.frinight.gopaper.retrofit.ApiService
+import com.frinight.gopaper.retrofit.FormLoginModel
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class Form_Register : AppCompatActivity() {
 
@@ -59,11 +65,7 @@ class Form_Register : AppCompatActivity() {
     }
 
     private fun registerUser() {
-        // Mendapatkan instance dari AppDatabase
-        val appDatabase = AppDatabase.getInstance(this)
-
         if (validateInput()) {
-            // Membuat objek User dari input pengguna
             val user = User(
                 email = editTextEmail.text.toString(),
                 fullName = etNamaLengkap.text.toString(),
@@ -72,16 +74,45 @@ class Form_Register : AppCompatActivity() {
                 password = etPassword.text.toString()
             )
 
-            // Menjalankan operasi penggunaan Coroutine untuk menyimpan data pengguna ke database
-            GlobalScope.launch {
-                appDatabase.userDao().insertUser(user)
-            }
-
-            resetInputFields()
-            showToast("Registrasi berhasil!")
-            navigateToLoginScreen()  // Memanggil fungsi untuk pindah ke layar login
+            registerUserToApi(FormLoginModel(
+                user.fullName ?: "",
+                user.email ?: "",
+                user.phoneNumber ?: "",
+                user.address ?: "",
+                user.password,
+                "tell me about yourself",
+                null,
+                null,
+                "ID"
+            ))
         }
     }
+
+
+    private fun registerUserToApi(user: FormLoginModel) {
+        val apiService = ApiService.endPoint
+        val call: Call<FormLoginModel> = apiService.postUsers(user)
+
+        call.enqueue(object : Callback<FormLoginModel> {
+            override fun onResponse(call: Call<FormLoginModel>, response: Response<FormLoginModel>) {
+                if (response.isSuccessful) {
+                    showToast("Pendaftaran Berhasil Silahkan Login")
+                    resetInputFields()
+                    navigateToLoginScreen()
+                } else {
+                    showToast("Gagal mendaftarkan pengguna ${response.errorBody()?.string()}")
+                    Log.d("RegisterApi", "onResponse:${response.errorBody()?.string()}")
+                    println("Error: ${response.errorBody()?.string()}")
+                }
+            }
+
+            override fun onFailure(call: Call<FormLoginModel>, t: Throwable) {
+                showToast("Gagal mendaftarkan pengguna ${t.message}")
+                Log.d("ErroApi","Gagal mendaftarkan pengguna ${t.message}")
+            }
+        })
+    }
+
 
 
     private fun resetInputFields() {

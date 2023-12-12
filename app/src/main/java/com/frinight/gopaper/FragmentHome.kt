@@ -46,8 +46,8 @@ class FragmentHome : Fragment(R.layout.fragment_home) {
         val userId = getLoggedInUserId()
         if (userId != -1L) {
             GlobalScope.launch {
-                val fullName = userDao.getFullName(userId)
-                updateGreetingText(fullName)
+//                val fullName = userDao.getFullName(userId)
+//                updateGreetingText(fullName)
             }
         }
     }

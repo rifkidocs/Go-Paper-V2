@@ -55,18 +55,18 @@ class Form_Login : AppCompatActivity() {
         val appDatabase = AppDatabase.getInstance(this)
 
         GlobalScope.launch {
-            val user = appDatabase.userDao().getUserByEmail(email)
-            if (user != null) {
-                if (user.password == password) {
-                    showToast("Login berhasil")
-                    saveLoginState(user.uid, email, password)  // Simpan informasi login
-                    navigateToMainActivity()
-                } else {
-                    showToast("Email atau password tidak valid")
-                }
-            } else {
-                showToast("Email atau password tidak valid")
-            }
+//            val user = appDatabase.userDao().getUserByEmail(email)
+//            if (user != null) {
+//                if (user.password == password) {
+//                    showToast("Login berhasil")
+//                    saveLoginState(user.uid, email, password)  // Simpan informasi login
+//                    navigateToMainActivity()
+//                } else {
+//                    showToast("Email atau password tidak valid")
+//                }
+//            } else {
+//                showToast("Email atau password tidak valid")
+//            }
         }
     }
 
