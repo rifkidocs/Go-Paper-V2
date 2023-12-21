@@ -97,14 +97,14 @@ class Form_Register : AppCompatActivity() {
                     resetInputFields()
                     navigateToLoginScreen()
                 } else {
-                    showToast("Gagal mendaftarkan pengguna ${response.errorBody()?.string()}")
+                    showToast("Gagal mendaftarkan pengguna 1${response.errorBody()?.string()}")
                     Log.d("RegisterApi", "onResponse:${response.errorBody()?.string()}")
                     println("Error: ${response.errorBody()?.string()}")
                 }
             }
 
             override fun onFailure(call: Call<FormRegisterModel>, t: Throwable) {
-                showToast("Gagal mendaftarkan pengguna ${t.message}")
+                showToast("Gagal mendaftarkan pengguna 2 ${t.message}")
                 Log.d("ErroApi","Gagal mendaftarkan pengguna ${t.message}")
             }
         })
